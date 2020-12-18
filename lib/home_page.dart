@@ -15,12 +15,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ListCombo(
-              child: Text('Selecione um Estado'),
-              getList: () {  }, onItemTapped: (value) {  }, itemBuilder: (BuildContext context, ComboParameters parameters, item) {  },),
-            ListCombo(
-              child: Text('Selecione uma Cidade'),
-              getList: () {  }, onItemTapped: (value) {  }, itemBuilder: (BuildContext context, ComboParameters parameters, item) {  },),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListCombo(
+                child: Text('Selecione um Estado'),
+                getList: () => [], onItemTapped: (value) {  }, itemBuilder: (BuildContext context, ComboParameters parameters, item) {  },),
+            ),
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListCombo(
+                child: Text('Selecione uma Cidade'),
+                getList: () => [], onItemTapped: (value) {  }, itemBuilder: (BuildContext context, ComboParameters parameters, item) {  },),
+            ),
           ],
         ),
       ),
